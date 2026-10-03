@@ -1,0 +1,10 @@
+{
+  "name": "Hand of the King",
+  "short_name": "Hand of the King",
+  "display": "standalone",
+  "start_url": "/hand-of-the-king/",
+  "background_color": "#ffffff",
+  "icons": [
+    { "src": "/hand-of-the-king/the-hand.jpg", "sizes": "512x512", "type": "image/png" }
+  ]
+}
