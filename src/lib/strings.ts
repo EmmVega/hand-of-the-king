@@ -9,7 +9,7 @@ export const STRINGS = {
   en: {
     // ── App chrome ────────────────────────────────────────────────────
     theHand:              "The Hand",
-    handsView:            "Hand's View · same numbers, right-side up",
+    handsView:            "Hand's View · same numbers, right-side up kk",
 
     // ── Phases ───────────────────────────────────────────────────────
     phaseReinforce:       'Reinforce',
@@ -102,6 +102,8 @@ export const STRINGS = {
     rulesAboutBody:       'Hand of the King is a score tracker for a custom Game of Thrones–themed RISK variant. It tracks territories, castles, ports, VPs, and armies for up to 7 Great Houses. The Hand manages the app; all other players read their own column on the screen.',
     rulesTableTitle:      'Table Rules',
     rulesMaesterCard:     "Maester cards — any player may purchase a Maester card at any moment, even during another player's turn.",
+    rulesCharacters:      'Character cards — Characters that do not specify otherwise can be activated at any time during the round.',
+    rulesSupriseIvansion: 'Surprise Invasion — After an invasion, another player can pay a Maester card or 300 coins and can perform 1 invasion until conquering or retreating. No maneuvering. The dice return to the player whose turn it is. Limited to 1 per player, per round.',
     rulesRolesTitle:      'Roles at the Table',
     rulesFooter:          'The Maester of Laws has the final word on all disputes.',
     rulesSuggested7th:    'Suggested 7th Role',
@@ -224,7 +226,9 @@ export const STRINGS = {
     rulesAboutTitle:      'Sobre esta App',
     rulesAboutBody:       'La Mano del Rey es un marcador para una variante de RISK ambientada en Juego de Tronos. Registra territorios, castillos, puertos, PVs y ejércitos para hasta 7 Grandes Casas. La Mano gestiona la app; los demás jugadores leen su columna en pantalla.',
     rulesTableTitle:      'Reglas de Mesa',
-    rulesMaesterCard:     'Cartas de Maestre — cualquier jugador puede comprar una carta de Maestre en cualquier momento, incluso durante el turno de otro jugador.',
+    rulesMaesterCard:     'Cartas de Maestre — cualquier jugador puede comprar y/o usar una carta de Maestre en cualquier momento, incluso durante el turno de otro jugador.',
+    rulesCharacters:      'Cartas de Personaje — Los personajes que no especifiquen, pueden activarse en cualquier momento de la ronda.',
+    rulesSupriseIvansion: 'Invasión sorpresa — Después de una invasión, otro jugador puede pagar una carta Maestre o 300 monedas y puede realizar 1 invasión hasta conquistar o retirarse. Sin maniobra. Los dados regresan al jugador en turno. Limitado 1 por jugador, por ronda.',
     rulesRolesTitle:      'Roles en la Mesa',
     rulesFooter:          'El Maestre de las Leyes tiene la última palabra en todas las disputas.',
     rulesSuggested7th:    'Séptimo Rol Sugerido',
@@ -243,7 +247,7 @@ export const STRINGS = {
     role6Title:           'Maestre de las Leyes',
     role6Desc:            'Tiene el reglamento. Árbitro final en cualquier pregunta — su decisión es inapelable.',
     role7Title:           'Caballero de los Siete Reinos',
-    role7Desc:            'Guardián de unidades especiales. Sostiene y distribuye máquinas de asedio, caballeros y fortifications a cualquier casa cuando se le requiere en batalla.',
+    role7Desc:            'Guardián de unidades especiales. Sostiene y distribuye catapultas, caballeros y torres a cualquier casa cuando se le requiere en batalla.',
     role7aTitle:          'Maestro de los Susurros',
     role7aDesc:           'Lleva registro de alianzas y tratos entre jugadores. Árbitro social — media en disputas que el Maestre de las Leyes no puede resolver solo.',
     role7bTitle:          'Lord del Puerto',

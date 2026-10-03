@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from 'react';
 import { STRINGS, Language } from './strings';
 
-const LanguageContext = createContext<Language>('en');
+const LanguageContext = createContext<Language>('es');
 
 export const LanguageProvider: React.FC<{
   language: Language;

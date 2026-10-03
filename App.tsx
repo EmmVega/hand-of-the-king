@@ -7,7 +7,7 @@ import { Cinzel_400Regular, Cinzel_600SemiBold, Cinzel_700Bold } from '@expo-goo
 import { IMFellEnglish_400Regular, IMFellEnglish_400Regular_Italic } from '@expo-google-fonts/im-fell-english';
 import { useGameState, useTweaks } from './src/hooks/useGameState';
 import { T } from './src/lib/typography';
-import { LanguageProvider } from './src/lib/LanguageContext';
+import { LanguageProvider, useLanguage, useStrings } from './src/lib/LanguageContext';
 import { HOUSE_SETS } from './src/lib/gameState';
 import { computeReinforce } from './src/lib/formulas';
 import { HouseColumn } from './src/components/HouseColumn';
@@ -15,6 +15,7 @@ import { HouseMirror } from './src/components/HouseMirror';
 import { HandPanel } from './src/components/HandPanel';
 import { LogOverlay, LeaderboardOverlay, SettingsOverlay, CustomRulesOverlay } from './src/components/Overlays';
 import { GameState } from './src/types/game';
+import { STRINGS } from './src/lib/strings';
 
 ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE).catch(err =>
   console.warn('Failed to lock orientation:', err)
@@ -38,6 +39,8 @@ export default function App() {
   const { state, dispatch, isHydrated } = useGameState();
   const [tweaks, setTweak, tweaksHydrated] = useTweaks();
   const [overlay, setOverlay] = useState<'log' | 'leaderboard' | 'settings' | 'rules' | null>(null);
+  const s = useStrings();
+  const currentLang = useLanguage();
 
   const visibleOrder = HOUSE_SETS[tweaks.playerCount] || HOUSE_SETS[7];
   const visibleHouses = visibleOrder
@@ -81,7 +84,7 @@ export default function App() {
 
   // Mirror row border tracks active house color (from prototype)
   const activeColor = activeHouse?.color || COLORS.rule;
-
+console.log('tweaks.language', tweaks.language);
   return (
     <LanguageProvider language={tweaks.language ?? 'en'}>
     <SafeAreaView style={styles.container}>
@@ -114,7 +117,7 @@ export default function App() {
       <View style={[styles.mirrorRow, { borderTopColor: activeColor, borderBottomColor: activeColor }]}>
         {/* Floating label mimicking the prototype's ::before pseudo-element */}
         <View style={styles.mirrorLabel}>
-          <Text style={styles.mirrorLabelText}>Hand's View · same numbers, right-side up</Text>
+          <Text style={styles.mirrorLabelText}>{tweaks.language === 'en' ? STRINGS.en.handsView : STRINGS.es.handsView}</Text>
         </View>
         <View style={styles.mirrorContent}>
           {[...visibleHouses].reverse().map(h => (

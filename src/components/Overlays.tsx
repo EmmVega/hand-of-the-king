@@ -385,6 +385,15 @@ export const CustomRulesOverlay: React.FC<{ onClose: () => void }> = ({ onClose 
                 <View style={styles.crRuleDot} />
                 <Text style={styles.crCardBody}>{s.rulesMaesterCard}</Text>
               </View>
+              <View style={[styles.crCard, styles.crRuleCard]}>
+                <View style={styles.crRuleDot} />
+                  <Text style={styles.crCardBody}>{s.rulesCharacters}</Text>
+              </View>
+              <View style={[styles.crCard, styles.crRuleCard]}>
+                <View style={styles.crRuleDot} />
+                                  <Text style={styles.crCardBody}>{s.rulesSupriseIvansion}</Text>
+
+              </View>
             </View>
 
             <View style={styles.crSection}>
