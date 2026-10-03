@@ -34,6 +34,9 @@
       "backgroundColor": "#ffffff"
         }
       ]
-    ]
+    ],
+    "experiments": {
+      "baseUrl": "/hand-of-the-king"
+    }
   }
 }
